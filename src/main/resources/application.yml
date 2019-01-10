@@ -1,0 +1,36 @@
+server:
+  port: 9010
+  servlet:
+    session:
+      timeout: 1800
+spring:
+  thymeleaf:
+    mode: LEGACYHTML5
+    cache: false
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 30Mb
+      max-request-size: 30Mb
+  devtools:
+    restarts:
+      enabled: true
+  cache:
+    type: ehcache
+    ehcache:
+      config: classpath:config/ehcache.xml
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+    default-fetch-size : 100
+    default-statment-timeout : 3000
+  mapper-locations: mybatis/**/*Mapper.xml
+  typeAliasesPackage: com.flame_springbootdo.**.domain
+
+#[����]���û����session�洢��ʽ��Ĭ��ehcache,��ѡredis,[����]������ spring cache type��shiro.�û���Ȩ�ޣ�session��spring.cacheͨ�á�
+#[����]cacheType: ehcache
+

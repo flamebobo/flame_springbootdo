@@ -1,0 +1,598 @@
+2019-01-08 00:42:25 -Validating all active sessions...
+2019-01-08 00:42:25 -Finished session validation.  No sessions were stopped.
+2019-01-08 01:42:25 -Validating all active sessions...
+2019-01-08 01:42:25 -Finished session validation.  No sessions were stopped.
+2019-01-08 02:42:25 -Validating all active sessions...
+2019-01-08 02:42:25 -Finished session validation.  No sessions were stopped.
+2019-01-08 03:42:25 -Validating all active sessions...
+2019-01-08 03:42:25 -Finished session validation.  No sessions were stopped.
+2019-01-08 04:42:25 -Validating all active sessions...
+2019-01-08 04:42:25 -Finished session validation.  No sessions were stopped.
+2019-01-08 05:42:25 -Validating all active sessions...
+2019-01-08 05:42:25 -Finished session validation.  No sessions were stopped.
+2019-01-08 06:42:25 -Validating all active sessions...
+2019-01-08 06:42:25 -Finished session validation.  No sessions were stopped.
+2019-01-08 07:42:25 -Validating all active sessions...
+2019-01-08 07:42:25 -Finished session validation.  No sessions were stopped.
+2019-01-08 08:42:25 -Validating all active sessions...
+2019-01-08 08:42:25 -Finished session validation.  No sessions were stopped.
+2019-01-08 09:42:25 -Validating all active sessions...
+2019-01-08 09:42:25 -Finished session validation.  No sessions were stopped.
+2019-01-08 10:42:25 -Validating all active sessions...
+2019-01-08 10:42:25 -Finished session validation.  No sessions were stopped.
+2019-01-08 11:42:25 -Validating all active sessions...
+2019-01-08 11:42:25 -Finished session validation.  No sessions were stopped.
+2019-01-08 12:42:25 -Validating all active sessions...
+2019-01-08 12:42:25 -Finished session validation.  No sessions were stopped.
+2019-01-08 13:42:25 -Validating all active sessions...
+2019-01-08 13:42:25 -Finished session validation.  No sessions were stopped.
+2019-01-08 14:42:25 -Validating all active sessions...
+2019-01-08 14:42:25 -Finished session validation.  No sessions were stopped.
+2019-01-08 15:26:13 -请求地址：http://localhost:9010/login;JSESSIONID=e639b55f-b256-4a0d-bfed-61edc25667ac
+2019-01-08 15:26:13 -HTTP METHOD : GET
+2019-01-08 15:26:13 -IP ADDRESS ：127.0.0.1
+2019-01-08 15:26:13 -CLASS_METHOD : com.flame_springbootdo.system.controller.LoginController-->login
+2019-01-08 15:26:13 -参数 ：[]
+2019-01-08 15:26:13 -耗时 ：5
+2019-01-08 15:26:13 -返回值 ：login
+2019-01-08 15:26:13 -请求地址：http://localhost:9010/login;JSESSIONID=e639b55f-b256-4a0d-bfed-61edc25667ac
+2019-01-08 15:26:13 -HTTP METHOD : GET
+2019-01-08 15:26:13 -IP ADDRESS ：127.0.0.1
+2019-01-08 15:26:13 -CLASS_METHOD : com.flame_springbootdo.system.controller.LoginController-->login
+2019-01-08 15:26:13 -参数 ：[]
+2019-01-08 15:26:13 -耗时 ：1
+2019-01-08 15:26:13 -返回值 ：login
+2019-01-08 15:26:14 -请求地址：http://localhost:9010/login
+2019-01-08 15:26:14 -HTTP METHOD : POST
+2019-01-08 15:26:14 -IP ADDRESS ：127.0.0.1
+2019-01-08 15:26:14 -CLASS_METHOD : com.flame_springbootdo.system.controller.LoginController-->ajaxLogin
+2019-01-08 15:26:14 -参数 ：[admin, 111111]
+2019-01-08 15:26:14 -==>  Preparing: select `user_id`,`username`,`name`,`password`,`dept_id`,`email`,`mobile`,`status`,`user_id_create`,`gmt_create`,`gmt_modified`,`sex`,`birth`,`pic_id`,`live_address`,`hobby`,`province`,`city`,`district` from sys_user WHERE username = ? order by user_id desc 
+2019-01-08 15:26:14 -==> Parameters: admin(String)
+2019-01-08 15:26:14 -<==      Total: 1
+2019-01-08 15:26:14 -耗时 ：37
+2019-01-08 15:26:14 -返回值 ：{msg=操作成功, code=0}
+2019-01-08 15:26:14 -这是啥异常：java.lang.StringIndexOutOfBoundsException: String index out of range: 4999
+2019-01-08 15:26:14 -==>  Preparing: insert into sys_log ( `user_id`, `username`, `operation`, `time`, `method`, `params`, `ip`, `gmt_create` ) values ( ?, ?, ?, ?, ?, ?, ?, ? ) 
+2019-01-08 15:26:14 -==> Parameters: 1(Long), admin(String), 登录(String), 37(Integer), com.flame_springbootdo.system.controller.LoginController.ajaxLogin(String), null, 127.0.0.1(String), 2019-01-08 15:26:14.978(Timestamp)
+2019-01-08 15:26:15 -<==    Updates: 1
+2019-01-08 15:26:15 -请求地址：http://localhost:9010/index
+2019-01-08 15:26:15 -HTTP METHOD : GET
+2019-01-08 15:26:15 -IP ADDRESS ：127.0.0.1
+2019-01-08 15:26:15 -CLASS_METHOD : com.flame_springbootdo.system.controller.LoginController-->index
+2019-01-08 15:26:15 -参数 ：[{}]
+2019-01-08 15:26:15 -==>  Preparing: select distinct m.menu_id, parent_id, name, url, perms, `type`, icon, order_num, gmt_create, gmt_modified from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id left join sys_user_role ur on rm.role_id = ur.role_id where ur.user_id = ? order by m.order_num 
+2019-01-08 15:26:15 -==> Parameters: 1(Long)
+2019-01-08 15:26:15 -<==      Total: 62
+2019-01-08 15:26:15 -==>  Preparing: select `id`,`type`,`url`,`create_date` from sys_file where id = ? 
+2019-01-08 15:26:15 -==> Parameters: 143(Long)
+2019-01-08 15:26:15 -<==      Total: 1
+2019-01-08 15:26:15 -耗时 ：67
+2019-01-08 15:26:15 -返回值 ：index_v1
+2019-01-08 15:26:15 -==>  Preparing: insert into sys_log ( `user_id`, `username`, `operation`, `time`, `method`, `params`, `ip`, `gmt_create` ) values ( ?, ?, ?, ?, ?, ?, ?, ? ) 
+2019-01-08 15:26:15 -==> Parameters: 1(Long), admin(String), 请求访问主页(String), 67(Integer), com.flame_springbootdo.system.controller.LoginController.index(String), {"menus":[{"attributes":{"icon":"fa fa-address-book-o","url":""},"checked":false,"children":[{"attributes":{"icon":"fa fa-reorder","url":"/common/dict"},"checked":false,"children":[{"attributes":{"url":"/common/dict/edit"},"checked":false,"children":[],"hasChildren":false,"hasParent":true,"id":"80","parentId":"78","text":"编辑"},{"attributes":{"url":"/common/dict/add"},"checked":false,"children":[],"hasChildren":false,"hasParent":true,"id":"79","parentId":"78","text":"增加"},{"attributes":{"icon":"","url":"/common/dict/remove"},"checked":false,"children":[],"hasChildren":false,"hasParent":true,"id":"81","parentId":"78","text":"删除"},{"attributes":{"icon":"","url":"/common/dict/batchRemove"},"checked":false,"children":[],"hasChildren":false,"hasParent":true,"id":"83","parentId":"78","text":"批量删除"}],"hasChildren":true,"hasParent":true,"id":"78","parentId":"1","text":"数据字典"},{"attributes":{"icon":"fa fa-folder-open","url":"/common/sysFile"},"checked":false,"children":[],"hasChildren":false,"hasParent":true,"id":"71","parentId":"1","text":"文件管理"}],"hasChildren":true,"hasParent":false,"id":"1","parentId":"0","text":"基础管理"},{"attributes":{"icon":"fa fa-desktop"},"checked":false,"children":[{"attributes":{"icon":"fa fa-user","url":"sys/user/"},"checked":false,"children":[{"attributes":{},"checked":false,"children":[],"hasChildren":false,"hasParent":true,"id":"14","parentId":"6","text":"删除"},{"attributes":{"icon":"","url":""},"checked":false,"children":[],"hasChildren":false,"hasParent":true,"id":"12","parentId":"6","text":"新增"},{"attributes":{"icon":"","url":""},"checked":false,"children":[],"hasChildren":false,"hasParent":true,"id":"26","parentId":"6","text":"重置密码"},{"attributes":{"icon":"","url":""},"checked":false,"children":[],"hasChildren":false,"hasParent":true,"id":"24","parentId":"6","text":"批量删除"},{"attributes":{"icon":"","url":""},"checked":false,"children":[],"hasChildren":false,"hasParent":true,"id":"13","parentId":"6","text":"编辑"},{"attributes":{},"checked":false,"children":[],"hasChildren":false,"hasParent":true,"id":"25","parentId":"6","text":"停用"}],"hasChildren":true,"hasParent":true,"id":"6","parentId":"3","text":"用户管理"},{"attributes":{"icon":"fa fa-paw","url":"sys/role"},"checked":false,"children":[{"attributes":{"icon":"","url":""},"checked":false,"children":[],"hasChildren":false,"hasParent":true,"id":"55","parentId":"7","text":"编辑"},{"attributes":{"url":""},"checked":false,"children":[],"hasChildren":false,"hasParent":true,"id":"62","parentId":"7","text":"批量删除"},{"attributes":{"url":""},"checked":false,"children":[],"hasChildren":false,"hasParent":true,"id":"56","parentId":"7","text":"删除"},{"attributes":{"icon":"","url":""},"checked":false,"children":[],"hasChildren":false,"hasParent":true,"id":"15","parentId":"7","text":"新增"}],"hasChildren":true,"hasParent":true,"id":"7","parentId":"3","text":"角色管理"},{"attributes":{"icon":"fa fa-th-list","url":"sys/menu/"},"checked":false,"children":[{"attributes":{"url":""},"checked":false,"children":[],"hasChildren":false,"hasParent":true,"id":"61","parentId":"2","text":"批量删除"},{"attributes":{"icon":"","url":""},"checked":false,"children":[],"hasChildren":false,"hasParent":true,"id":"22","parentId":"2","text":"删除"},{"attributes":{"icon":"","url":""},"checked":false,"children":[],"hasChildren":false,"hasParent":true,"id":"20","parentId":"2","text":"新增"},{"attributes":{"icon":"","url":""},"checked":false,"children":[],"hasChildren":false,"hasParent":true,"id":"21","parentId":"2","text":"编辑"}],"hasChildren":true,"hasParent":true,"id":"2","parentId":"3","text":"系统菜单"},{"attributes":{"icon":"fa fa-users","url":"/system/sysDept"},"checked":false,"children":[{"attributes":{"url":"/system/sysDept/add"},"checked":false,"children":[],"hasChildren":false,"hasParent":true,"id":"74","parentId":"73","text":"增加"},{"attributes":{"url":"system/sysDept/remove"},"checked":false,"children":[],"hasChildren":false,"hasParent":true,"id":"75","parentId":"73","text":"刪除"},{"attributes":{"url":"/system/sysDept/edit"},"checked":false,"children":[],"hasChildren":false,"hasParent":true,"id":"76","parentId":"73","text":"编辑"}],"hasChildren":true,"hasParent":true,"id":"73","parentId":"3","text":"部门管理"}],"hasChildren":true,"hasParent":false,"id":"3","parentId":"0","text":"系统管理"},{"attributes":{"icon":"fa fa-gear","url":""},"checked":false,"children":[{"attributes":{"icon":"","url":"/swagger-ui.html"},"checked":false,"children":[],"hasChildren":false,"hasParent":true,"id":"104","parentId":"77","text":"swagger"},{"attributes":{"icon":"fa fa-code","url":"common/generator"},"checked":false,"children":[],"hasChildren":false,"hasParent":true,"id":"48","parentId":"77","text":"代码生成"},{"attributes":{"icon":"fa fa-hourglass-1","url":"common/job"},"checked":false,"children":[],"hasChildren":false,"hasParent":true,"id":"72","parentId":"77","text":"计划任务"}],"hasChildren":true,"hasParent":false,"id":"77","parentId":"0","text":"系统工具"},{"attributes":{"icon":"fa fa-video-camera","url":""},"checked":false,"child(String), 127.0.0.1(String), 2019-01-08 15:26:15.104(Timestamp)
+2019-01-08 15:26:15 -<==    Updates: 1
+2019-01-08 15:26:15 -请求地址：http://localhost:9010/main
+2019-01-08 15:26:15 -HTTP METHOD : GET
+2019-01-08 15:26:15 -IP ADDRESS ：127.0.0.1
+2019-01-08 15:26:15 -CLASS_METHOD : com.flame_springbootdo.system.controller.LoginController-->main
+2019-01-08 15:26:15 -参数 ：[]
+2019-01-08 15:26:15 -耗时 ：0
+2019-01-08 15:26:15 -返回值 ：main
+2019-01-08 15:26:15 -请求地址：http://localhost:9010/main
+2019-01-08 15:26:15 -HTTP METHOD : GET
+2019-01-08 15:26:15 -IP ADDRESS ：127.0.0.1
+2019-01-08 15:26:15 -CLASS_METHOD : com.flame_springbootdo.system.controller.LoginController-->main
+2019-01-08 15:26:15 -参数 ：[]
+2019-01-08 15:26:15 -耗时 ：0
+2019-01-08 15:26:15 -返回值 ：main
+2019-01-08 15:42:25 -Validating all active sessions...
+2019-01-08 15:42:25 -Finished session validation.  No sessions were stopped.
+2019-01-08 15:42:42 -Starting FlameSpringbootdoApplication on zh-sn-1012 with PID 11212 (G:\IDEA\springboot_pratice\target\classes started by Flame.Lai in G:\IDEA\springboot_pratice)
+2019-01-08 15:42:42 -The following profiles are active: dev
+2019-01-08 15:42:42 -Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@453f509c: startup date [Tue Jan 08 15:42:42 CST 2019]; root of context hierarchy
+2019-01-08 15:42:42 -Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@32f0341: startup date [Mon Jan 07 17:42:01 CST 2019]; root of context hierarchy
+2019-01-08 15:42:42 -Stopping beans in phase 2147483647
+2019-01-08 15:42:42 -Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-01-08 15:42:42 -Stopping beans in phase 0
+2019-01-08 15:42:42 -Unregistering JMX-exposed beans on shutdown
+2019-01-08 15:42:42 -Unregistering JMX-exposed beans
+2019-01-08 15:42:42 -Shutting down Quartz Scheduler
+2019-01-08 15:42:42 -Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2019-01-08 15:42:42 -Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-01-08 15:42:42 -Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2019-01-08 15:42:42 -{dataSource-8} closed
+2019-01-08 15:42:42 -Disabled session validation scheduler.
+2019-01-08 15:42:44 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-08 15:42:46 -Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$a6c0e365] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:42:46 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e0552537] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:42:46 -Bean 'shiroConfig' of type [com.flame_springbootdo.system.config.ShiroConfig$$EnhancerBySpringCGLIB$$e54c1317] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:42:46 -Bean 'userRealm' of type [com.flame_springbootdo.system.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:42:46 -No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/C:/Users/flame.lai/.m2/repository/net/sf/ehcache/ehcache/2.10.5/ehcache-2.10.5.jar!/ehcache-failsafe.xml
+2019-01-08 15:42:46 -Bean 'cacheManager2' of type [net.sf.ehcache.CacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:42:46 -Bean 'ehCacheManager' of type [org.apache.shiro.cache.ehcache.EhCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:42:46 -Cache with name 'com.flame_springbootdo.system.shiro.UserRealm.authorizationCache.10' does not yet exist.  Creating now.
+2019-01-08 15:42:46 -Added EhCache named [com.flame_springbootdo.system.shiro.UserRealm.authorizationCache.10]
+2019-01-08 15:42:46 -Bean 'sessionDAO' of type [org.apache.shiro.session.mgt.eis.MemorySessionDAO] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:42:46 -Bean 'sessionManager' of type [org.apache.shiro.web.session.mgt.DefaultWebSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:42:46 -Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:42:46 -Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:42:46 -Tomcat initialized with port(s): 9010 (http)
+2019-01-08 15:42:46 -Root WebApplicationContext: initialization completed in 4431 ms
+2019-01-08 15:42:46 -Servlet statViewServlet mapped to [/druid/*]
+2019-01-08 15:42:46 -Servlet dispatcherServlet mapped to [/]
+2019-01-08 15:42:46 -Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-08 15:42:46 -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-08 15:42:46 -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-08 15:42:46 -Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-08 15:42:46 -Mapping filter: 'webStatFilter' to urls: [/*]
+2019-01-08 15:42:46 -Mapping filter: 'shiroFilterFactoryBean' to: [/*]
+2019-01-08 15:42:46 -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'modelController': Unsatisfied dependency expressed through field 'repositoryService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.activiti.engine.RepositoryService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-01-08 15:42:47 -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-01-08 15:42:47 -Starting FlameSpringbootdoApplication on zh-sn-1012 with PID 11212 (G:\IDEA\springboot_pratice\target\classes started by Flame.Lai in G:\IDEA\springboot_pratice)
+2019-01-08 15:42:47 -The following profiles are active: dev
+2019-01-08 15:42:47 -Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5fdf1a58: startup date [Tue Jan 08 15:42:47 CST 2019]; root of context hierarchy
+2019-01-08 15:42:47 -
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field repositoryService in com.flame_springbootdo.activiti.controller.ModelController required a bean of type 'org.activiti.engine.RepositoryService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.activiti.engine.RepositoryService' in your configuration.
+
+2019-01-08 15:42:49 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-08 15:42:50 -Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$a6c0e365] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:42:50 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e0552537] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:42:50 -Bean 'shiroConfig' of type [com.flame_springbootdo.system.config.ShiroConfig$$EnhancerBySpringCGLIB$$e54c1317] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:42:50 -Bean 'userRealm' of type [com.flame_springbootdo.system.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:42:50 -No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/C:/Users/flame.lai/.m2/repository/net/sf/ehcache/ehcache/2.10.5/ehcache-2.10.5.jar!/ehcache-failsafe.xml
+2019-01-08 15:42:50 -Bean 'cacheManager2' of type [net.sf.ehcache.CacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:42:50 -Bean 'ehCacheManager' of type [org.apache.shiro.cache.ehcache.EhCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:42:50 -Cache with name 'com.flame_springbootdo.system.shiro.UserRealm.authorizationCache.11' does not yet exist.  Creating now.
+2019-01-08 15:42:50 -Added EhCache named [com.flame_springbootdo.system.shiro.UserRealm.authorizationCache.11]
+2019-01-08 15:42:50 -Bean 'sessionDAO' of type [org.apache.shiro.session.mgt.eis.MemorySessionDAO] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:42:50 -Bean 'sessionManager' of type [org.apache.shiro.web.session.mgt.DefaultWebSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:42:50 -Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:42:50 -Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:42:50 -Tomcat initialized with port(s): 9010 (http)
+2019-01-08 15:42:50 -Initializing ProtocolHandler ["http-nio-9010"]
+2019-01-08 15:42:50 -Starting service [Tomcat]
+2019-01-08 15:42:50 -Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-01-08 15:42:50 -Initializing Spring embedded WebApplicationContext
+2019-01-08 15:42:50 -Root WebApplicationContext: initialization completed in 3422 ms
+2019-01-08 15:42:51 -Servlet statViewServlet mapped to [/druid/*]
+2019-01-08 15:42:51 -Servlet dispatcherServlet mapped to [/]
+2019-01-08 15:42:51 -Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-08 15:42:51 -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-08 15:42:51 -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-08 15:42:51 -Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-08 15:42:51 -Mapping filter: 'webStatFilter' to urls: [/*]
+2019-01-08 15:42:51 -Mapping filter: 'shiroFilterFactoryBean' to: [/*]
+2019-01-08 15:42:51 -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'modelController': Unsatisfied dependency expressed through field 'repositoryService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.activiti.engine.RepositoryService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-01-08 15:42:51 -Stopping service [Tomcat]
+2019-01-08 15:42:51 -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-01-08 15:42:51 -
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field repositoryService in com.flame_springbootdo.activiti.controller.ModelController required a bean of type 'org.activiti.engine.RepositoryService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.activiti.engine.RepositoryService' in your configuration.
+
+2019-01-08 15:43:39 -Starting FlameSpringbootdoApplication on zh-sn-1012 with PID 11212 (G:\IDEA\springboot_pratice\target\classes started by Flame.Lai in G:\IDEA\springboot_pratice)
+2019-01-08 15:43:39 -The following profiles are active: dev
+2019-01-08 15:43:39 -Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6f051497: startup date [Tue Jan 08 15:43:39 CST 2019]; root of context hierarchy
+2019-01-08 15:43:40 -Starting FlameSpringbootdoApplication on zh-sn-1012 with PID 11212 (G:\IDEA\springboot_pratice\target\classes started by Flame.Lai in G:\IDEA\springboot_pratice)
+2019-01-08 15:43:40 -The following profiles are active: dev
+2019-01-08 15:43:40 -Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@a1da7f0: startup date [Tue Jan 08 15:43:40 CST 2019]; root of context hierarchy
+2019-01-08 15:43:42 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-08 15:43:42 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-08 15:43:43 -Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$a6c0e365] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:43:43 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e0552537] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:43:43 -Bean 'shiroConfig' of type [com.flame_springbootdo.system.config.ShiroConfig$$EnhancerBySpringCGLIB$$e54c1317] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:43:43 -Bean 'userRealm' of type [com.flame_springbootdo.system.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:43:43 -No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/C:/Users/flame.lai/.m2/repository/net/sf/ehcache/ehcache/2.10.5/ehcache-2.10.5.jar!/ehcache-failsafe.xml
+2019-01-08 15:43:43 -Bean 'cacheManager2' of type [net.sf.ehcache.CacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:43:43 -Bean 'ehCacheManager' of type [org.apache.shiro.cache.ehcache.EhCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:43:43 -Cache with name 'com.flame_springbootdo.system.shiro.UserRealm.authorizationCache.12' does not yet exist.  Creating now.
+2019-01-08 15:43:43 -Added EhCache named [com.flame_springbootdo.system.shiro.UserRealm.authorizationCache.12]
+2019-01-08 15:43:43 -Bean 'sessionDAO' of type [org.apache.shiro.session.mgt.eis.MemorySessionDAO] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:43:43 -Bean 'sessionManager' of type [org.apache.shiro.web.session.mgt.DefaultWebSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:43:43 -Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:43:43 -Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$a6c0e365] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:43:43 -Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:43:43 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e0552537] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:43:43 -Bean 'shiroConfig' of type [com.flame_springbootdo.system.config.ShiroConfig$$EnhancerBySpringCGLIB$$e54c1317] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:43:43 -Bean 'userRealm' of type [com.flame_springbootdo.system.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:43:43 -Bean 'cacheManager2' of type [net.sf.ehcache.CacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:43:43 -Bean 'ehCacheManager' of type [org.apache.shiro.cache.ehcache.EhCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:43:43 -Cache with name 'com.flame_springbootdo.system.shiro.UserRealm.authorizationCache.13' does not yet exist.  Creating now.
+2019-01-08 15:43:43 -Added EhCache named [com.flame_springbootdo.system.shiro.UserRealm.authorizationCache.13]
+2019-01-08 15:43:43 -Bean 'sessionDAO' of type [org.apache.shiro.session.mgt.eis.MemorySessionDAO] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:43:43 -Bean 'sessionManager' of type [org.apache.shiro.web.session.mgt.DefaultWebSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:43:43 -Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:43:43 -Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-08 15:43:43 -Tomcat initialized with port(s): 9010 (http)
+2019-01-08 15:43:43 -Initializing ProtocolHandler ["http-nio-9010"]
+2019-01-08 15:43:43 -Starting service [Tomcat]
+2019-01-08 15:43:43 -Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-01-08 15:43:43 -Initializing Spring embedded WebApplicationContext
+2019-01-08 15:43:43 -Root WebApplicationContext: initialization completed in 4088 ms
+2019-01-08 15:43:43 -Tomcat initialized with port(s): 9010 (http)
+2019-01-08 15:43:43 -Initializing ProtocolHandler ["http-nio-9010"]
+2019-01-08 15:43:43 -Starting service [Tomcat]
+2019-01-08 15:43:43 -Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-01-08 15:43:44 -Servlet statViewServlet mapped to [/druid/*]
+2019-01-08 15:43:44 -Servlet dispatcherServlet mapped to [/]
+2019-01-08 15:43:44 -Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-08 15:43:44 -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-08 15:43:44 -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-08 15:43:44 -Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-08 15:43:44 -Mapping filter: 'webStatFilter' to urls: [/*]
+2019-01-08 15:43:44 -Mapping filter: 'shiroFilterFactoryBean' to: [/*]
+2019-01-08 15:43:44 -Initializing Spring embedded WebApplicationContext
+2019-01-08 15:43:44 -Root WebApplicationContext: initialization completed in 3919 ms
+2019-01-08 15:43:44 -{dataSource-10} inited
+2019-01-08 15:43:44 -Servlet statViewServlet mapped to [/druid/*]
+2019-01-08 15:43:44 -Servlet dispatcherServlet mapped to [/]
+2019-01-08 15:43:44 -Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-08 15:43:44 -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-08 15:43:44 -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-08 15:43:44 -Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-08 15:43:44 -Mapping filter: 'webStatFilter' to urls: [/*]
+2019-01-08 15:43:44 -Mapping filter: 'shiroFilterFactoryBean' to: [/*]
+2019-01-08 15:43:44 -{dataSource-11} inited
+2019-01-08 15:43:44 -ProcessEngine default created
+2019-01-08 15:43:44 -ProcessEngine default created
+2019-01-08 15:43:44 -ApplicationContext registed -->org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6f051497: startup date [Tue Jan 08 15:43:39 CST 2019]; root of context hierarchy
+2019-01-08 15:43:45 -ApplicationContext registed -->org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@a1da7f0: startup date [Tue Jan 08 15:43:40 CST 2019]; root of context hierarchy
+2019-01-08 15:43:45 -Using default implementation for ThreadExecutor
+2019-01-08 15:43:45 -Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-01-08 15:43:45 -Quartz Scheduler v.2.2.1 created.
+2019-01-08 15:43:45 -RAMJobStore initialized.
+2019-01-08 15:43:45 -Scheduler meta-data: Quartz Scheduler (v2.2.1) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-01-08 15:43:45 -Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2019-01-08 15:43:45 -Quartz scheduler version: 2.2.1
+2019-01-08 15:43:45 -JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@2639732d
+2019-01-08 15:43:45 -Using default implementation for ThreadExecutor
+2019-01-08 15:43:45 -Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-01-08 15:43:45 -Quartz Scheduler v.2.2.1 created.
+2019-01-08 15:43:45 -RAMJobStore initialized.
+2019-01-08 15:43:45 -Scheduler meta-data: Quartz Scheduler (v2.2.1) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-01-08 15:43:45 -Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2019-01-08 15:43:45 -Quartz scheduler version: 2.2.1
+2019-01-08 15:43:45 -JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@21144cf7
+2019-01-08 15:43:45 -Mapped "{[/activiti/model/list],methods=[GET]}" onto public com.flame_springbootdo.common.utils.PageUtils com.flame_springbootdo.activiti.controller.ModelController.list(int,int)
+2019-01-08 15:43:45 -Mapped "{[/activiti/model],methods=[GET]}" onto org.springframework.web.servlet.ModelAndView com.flame_springbootdo.activiti.controller.ModelController.model()
+2019-01-08 15:43:45 -Mapped "{[/activiti/model/edit/{id}],methods=[GET]}" onto public void com.flame_springbootdo.activiti.controller.ModelController.edit(javax.servlet.http.HttpServletResponse,java.lang.String)
+2019-01-08 15:43:45 -Mapped "{[/activiti/model/{modelId}/save],methods=[PUT]}" onto public void com.flame_springbootdo.activiti.controller.ModelController.saveModel(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2019-01-08 15:43:45 -Mapped "{[/activiti/editor/stencilset],methods=[GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.flame_springbootdo.activiti.controller.ModelController.getStencilset()
+2019-01-08 15:43:45 -Mapped "{[/activiti/model/{modelId}/json],methods=[GET]}" onto public com.fasterxml.jackson.databind.node.ObjectNode com.flame_springbootdo.activiti.controller.ModelController.getEditorJson(java.lang.String)
+2019-01-08 15:43:45 -Mapped "{[/activiti/model/add]}" onto public void com.flame_springbootdo.activiti.controller.ModelController.newModel(javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2019-01-08 15:43:45 -Mapped "{[/blog/bContent/add],methods=[GET]}" onto java.lang.String com.flame_springbootdo.blog.controller.ContentController.add()
+2019-01-08 15:43:45 -Mapped "{[/blog/bContent/save],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.blog.controller.ContentController.save(com.flame_springbootdo.blog.domain.ContentDO)
+2019-01-08 15:43:45 -Mapped "{[/blog/bContent],methods=[GET]}" onto java.lang.String com.flame_springbootdo.blog.controller.ContentController.bContent()
+2019-01-08 15:43:45 -Mapped "{[/common/dict/add],methods=[GET]}" onto java.lang.String com.flame_springbootdo.common.controller.DictController.add()
+2019-01-08 15:43:45 -Mapped "{[/common/dict/remove],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.common.controller.DictController.remove(java.lang.Long)
+2019-01-08 15:43:45 -Mapped "{[/common/dict/batchRemove],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.common.controller.DictController.remove(java.lang.Long[])
+2019-01-08 15:43:45 -Mapped "{[/common/dict/update]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.common.controller.DictController.update(com.flame_springbootdo.common.domain.DictDO)
+2019-01-08 15:43:45 -Mapped "{[/common/dict/list],methods=[GET]}" onto public com.flame_springbootdo.common.utils.PageUtils com.flame_springbootdo.common.controller.DictController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-08 15:43:45 -Mapped "{[/common/dict/save],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.common.controller.DictController.save(com.flame_springbootdo.common.domain.DictDO)
+2019-01-08 15:43:45 -Mapped "{[/common/dict/type],methods=[GET]}" onto public java.util.List<com.flame_springbootdo.common.domain.DictDO> com.flame_springbootdo.common.controller.DictController.listType()
+2019-01-08 15:43:45 -Mapped "{[/common/dict],methods=[GET]}" onto java.lang.String com.flame_springbootdo.common.controller.DictController.dict()
+2019-01-08 15:43:45 -Mapped "{[/common/dict/edit/{id}],methods=[GET]}" onto java.lang.String com.flame_springbootdo.common.controller.DictController.edit(org.springframework.ui.Model,java.lang.Long)
+2019-01-08 15:43:45 -Mapped "{[/common/dict/add/{type}/{description}],methods=[GET]}" onto java.lang.String com.flame_springbootdo.common.controller.DictController.addD(org.springframework.ui.Model,java.lang.String,java.lang.String)
+2019-01-08 15:43:45 -Mapped "{[/common/generator/list],methods=[GET]}" onto java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.flame_springbootdo.common.controller.GeneratorController.list()
+2019-01-08 15:43:45 -Mapped "{[/common/generator/code/{tableName}]}" onto public void com.flame_springbootdo.common.controller.GeneratorController.code(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) throws java.io.IOException
+2019-01-08 15:43:45 -Mapped "{[/common/generator],methods=[GET]}" onto java.lang.String com.flame_springbootdo.common.controller.GeneratorController.generator()
+2019-01-08 15:43:45 -Mapped "{[/common/job/add],methods=[GET]}" onto java.lang.String com.flame_springbootdo.common.controller.JobController.add()
+2019-01-08 15:43:45 -Mapped "{[/common/job/romove],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.common.controller.JobController.remove(java.lang.Long)
+2019-01-08 15:43:45 -Mapped "{[/common/job/batchRemove],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.common.controller.JobController.remove(java.lang.Long[])
+2019-01-08 15:43:45 -Mapped "{[/common/job/update]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.common.controller.JobController.update(com.flame_springbootdo.common.domain.TaskDO)
+2019-01-08 15:43:45 -Mapped "{[/common/job/list],methods=[GET]}" onto public com.flame_springbootdo.common.utils.PageUtils com.flame_springbootdo.common.controller.JobController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-08 15:43:45 -Mapped "{[/common/job/save],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.common.controller.JobController.save(com.flame_springbootdo.common.domain.TaskDO)
+2019-01-08 15:43:45 -Mapped "{[/common/job],methods=[GET]}" onto java.lang.String com.flame_springbootdo.common.controller.JobController.Task()
+2019-01-08 15:43:45 -Mapped "{[/common/job/edit/{id}],methods=[GET]}" onto java.lang.String com.flame_springbootdo.common.controller.JobController.edit(org.springframework.ui.Model,java.lang.Long)
+2019-01-08 15:43:45 -Mapped "{[/common/job/changeJobStatus],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.common.controller.JobController.changeJobStatus(java.lang.Long,java.lang.String)
+2019-01-08 15:43:45 -Mapped "{[/system/sysDept/add/{pId}],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.DeptController.add(java.lang.Long,org.springframework.ui.Model)
+2019-01-08 15:43:45 -Mapped "{[/system/sysDept/remove],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.DeptController.remove(java.lang.Long)
+2019-01-08 15:43:45 -Mapped "{[/system/sysDept/batchRemove],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.DeptController.remove(java.lang.Long[])
+2019-01-08 15:43:45 -Mapped "{[/system/sysDept/update]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.DeptController.update(com.flame_springbootdo.system.domain.DeptDO)
+2019-01-08 15:43:45 -Mapped "{[/system/sysDept/list],methods=[GET]}" onto public java.util.List<com.flame_springbootdo.system.domain.DeptDO> com.flame_springbootdo.system.controller.DeptController.list()
+2019-01-08 15:43:45 -Mapped "{[/system/sysDept/save],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.DeptController.save(com.flame_springbootdo.system.domain.DeptDO)
+2019-01-08 15:43:45 -Mapped "{[/system/sysDept/tree],methods=[GET]}" onto public com.flame_springbootdo.common.domain.Tree<com.flame_springbootdo.system.domain.DeptDO> com.flame_springbootdo.system.controller.DeptController.tree()
+2019-01-08 15:43:45 -Mapped "{[/system/sysDept/edit/{deptId}],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.DeptController.edit(java.lang.Long,org.springframework.ui.Model)
+2019-01-08 15:43:45 -Mapped "{[/system/sysDept],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.DeptController.dept()
+2019-01-08 15:43:45 -Mapped "{[/system/sysDept/treeView],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.DeptController.treeView()
+2019-01-08 15:43:45 -Mapped "{[/common/log/add],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.LogController.add()
+2019-01-08 15:43:45 -Mapped "{[/common/log/romove],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.LogController.remove(java.lang.Long)
+2019-01-08 15:43:45 -Mapped "{[/common/log/batchRemove],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.LogController.remove(java.lang.Long[])
+2019-01-08 15:43:45 -Mapped "{[/common/log/update]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.LogController.update(com.flame_springbootdo.system.domain.LogDO)
+2019-01-08 15:43:45 -Mapped "{[/common/log/list],methods=[GET]}" onto public com.flame_springbootdo.common.utils.PageUtils com.flame_springbootdo.system.controller.LogController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-08 15:43:45 -Mapped "{[/common/log/save],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.LogController.save(com.flame_springbootdo.system.domain.LogDO)
+2019-01-08 15:43:45 -Mapped "{[/common/log/search],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.LogController.search(java.lang.String)
+2019-01-08 15:43:45 -Mapped "{[/common/log/edit/{id}],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.LogController.edit(org.springframework.ui.Model,java.lang.Long)
+2019-01-08 15:43:45 -Mapped "{[/common/log],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.LogController.Log()
+2019-01-08 15:43:45 -Mapped "{[/index],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.LoginController.index(org.springframework.ui.Model)
+2019-01-08 15:43:45 -Mapped "{[/main],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.LoginController.main()
+2019-01-08 15:43:45 -Mapped "{[/logout],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.LoginController.logout()
+2019-01-08 15:43:45 -Mapped "{[/login],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.LoginController.login()
+2019-01-08 15:43:45 -Mapped "{[/ || ],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.LoginController.welcome(org.springframework.ui.Model)
+2019-01-08 15:43:45 -Mapped "{[/login],methods=[POST]}" onto com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.LoginController.ajaxLogin(java.lang.String,java.lang.String)
+2019-01-08 15:43:45 -Mapped "{[/sys/menu/add/{pId}],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.MenuController.add(org.springframework.ui.Model,java.lang.Long)
+2019-01-08 15:43:45 -Mapped "{[/sys/menu/remove],methods=[POST]}" onto com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.MenuController.remove(java.lang.Long)
+2019-01-08 15:43:45 -Mapped "{[/sys/menu/update],methods=[POST]}" onto com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.MenuController.update(com.flame_springbootdo.system.domain.MenuDO)
+2019-01-08 15:43:45 -Mapped "{[/sys/menu/list]}" onto java.util.List<com.flame_springbootdo.system.domain.MenuDO> com.flame_springbootdo.system.controller.MenuController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-08 15:43:45 -Mapped "{[/sys/menu/save],methods=[POST]}" onto com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.MenuController.save(com.flame_springbootdo.system.domain.MenuDO)
+2019-01-08 15:43:45 -Mapped "{[/sys/menu/tree/{roleId}],methods=[GET]}" onto com.flame_springbootdo.common.domain.Tree<com.flame_springbootdo.system.domain.MenuDO> com.flame_springbootdo.system.controller.MenuController.tree(java.lang.Long)
+2019-01-08 15:43:45 -Mapped "{[/sys/menu/tree],methods=[GET]}" onto com.flame_springbootdo.common.domain.Tree<com.flame_springbootdo.system.domain.MenuDO> com.flame_springbootdo.system.controller.MenuController.tree()
+2019-01-08 15:43:45 -Mapped "{[/sys/menu/edit/{id}],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.MenuController.edit(org.springframework.ui.Model,java.lang.Long)
+2019-01-08 15:43:45 -Mapped "{[/sys/menu],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.MenuController.menu(org.springframework.ui.Model)
+2019-01-08 15:43:45 -Mapped "{[/sys/role/add],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.RoleController.add()
+2019-01-08 15:43:45 -Mapped "{[/sys/role/update],methods=[POST]}" onto com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.RoleController.update(com.flame_springbootdo.system.domain.RoleDO)
+2019-01-08 15:43:45 -Mapped "{[/sys/role/list],methods=[GET]}" onto java.util.List<com.flame_springbootdo.system.domain.RoleDO> com.flame_springbootdo.system.controller.RoleController.list()
+2019-01-08 15:43:45 -Mapped "{[/sys/role/remove],methods=[POST]}" onto com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.RoleController.save(java.lang.Long)
+2019-01-08 15:43:45 -Mapped "{[/sys/role/save],methods=[POST]}" onto com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.RoleController.save(com.flame_springbootdo.system.domain.RoleDO)
+2019-01-08 15:43:45 -Mapped "{[/sys/role/batchRemove],methods=[POST]}" onto com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.RoleController.batchRemove(java.lang.Long[])
+2019-01-08 15:43:45 -Mapped "{[/sys/role],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.RoleController.role()
+2019-01-08 15:43:45 -Mapped "{[/sys/role/edit/{id}],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.RoleController.edit(java.lang.Long,org.springframework.ui.Model)
+2019-01-08 15:43:45 -Mapped "{[/sys/online/list]}" onto public java.util.List<com.flame_springbootdo.system.domain.UserOnline> com.flame_springbootdo.system.controller.SessionController.list()
+2019-01-08 15:43:45 -Mapped "{[/sys/online/sessionList]}" onto public java.util.Collection<org.apache.shiro.session.Session> com.flame_springbootdo.system.controller.SessionController.sessionList()
+2019-01-08 15:43:45 -Mapped "{[/sys/online/forceLogout/{sessionId}]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.SessionController.forceLogout(java.lang.String,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-01-08 15:43:45 -Mapped "{[/sys/online],methods=[GET]}" onto public java.lang.String com.flame_springbootdo.system.controller.SessionController.online()
+2019-01-08 15:43:45 -Mapped "{[/sys/online/listOnlineUser]}" onto public java.util.List<com.flame_springbootdo.system.domain.UserDO> com.flame_springbootdo.system.controller.SessionController.listOnlineUser()
+2019-01-08 15:43:45 -Mapped "{[/sys/user/exit],methods=[POST]}" onto boolean com.flame_springbootdo.system.controller.UserController.exit(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-08 15:43:45 -Mapped "{[/sys/user/add],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.UserController.add(org.springframework.ui.Model)
+2019-01-08 15:43:45 -Mapped "{[/sys/user/romove],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.UserController.remove(java.lang.Long)
+2019-01-08 15:43:45 -Mapped "{[/sys/user/batchRemove],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.UserController.remove(java.lang.Long[])
+2019-01-08 15:43:45 -Mapped "{[/sys/user/update]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.UserController.update(com.flame_springbootdo.system.domain.UserDO)
+2019-01-08 15:43:45 -Mapped "{[/sys/user/list],methods=[GET]}" onto public com.flame_springbootdo.common.utils.PageUtils com.flame_springbootdo.system.controller.UserController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-08 15:43:45 -Mapped "{[/sys/user/save],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.UserController.save(com.flame_springbootdo.system.domain.UserDO)
+2019-01-08 15:43:45 -Mapped "{[/sys/user],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.UserController.User()
+2019-01-08 15:43:45 -Mapped "{[/sys/user/edit/{id}],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.UserController.edit(org.springframework.ui.Model,java.lang.Long)
+2019-01-08 15:43:45 -Mapped "{[/sys/user/adminResetPwd],methods=[POST]}" onto com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.UserController.adminResetPwd(com.flame_springbootdo.system.vo.UserVO)
+2019-01-08 15:43:45 -Mapped "{[/sys/user/updatePeronal],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.UserController.updatePeronal(com.flame_springbootdo.system.domain.UserDO)
+2019-01-08 15:43:45 -Mapped "{[/sys/user/resetPwd/{id}],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.UserController.resetPwd(java.lang.Long,org.springframework.ui.Model)
+2019-01-08 15:43:45 -Mapped "{[/sys/user/personal],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.UserController.personal(org.springframework.ui.Model)
+2019-01-08 15:43:45 -Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-01-08 15:43:45 -Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-01-08 15:43:45 -Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-01-08 15:43:45 -Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-01-08 15:43:45 -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-08 15:43:45 -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-08 15:43:45 -Mapped "{[/activiti/model/list],methods=[GET]}" onto public com.flame_springbootdo.common.utils.PageUtils com.flame_springbootdo.activiti.controller.ModelController.list(int,int)
+2019-01-08 15:43:45 -Mapped "{[/activiti/model],methods=[GET]}" onto org.springframework.web.servlet.ModelAndView com.flame_springbootdo.activiti.controller.ModelController.model()
+2019-01-08 15:43:45 -Mapped "{[/activiti/model/edit/{id}],methods=[GET]}" onto public void com.flame_springbootdo.activiti.controller.ModelController.edit(javax.servlet.http.HttpServletResponse,java.lang.String)
+2019-01-08 15:43:45 -Mapped "{[/activiti/model/{modelId}/save],methods=[PUT]}" onto public void com.flame_springbootdo.activiti.controller.ModelController.saveModel(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2019-01-08 15:43:45 -Mapped "{[/activiti/editor/stencilset],methods=[GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.flame_springbootdo.activiti.controller.ModelController.getStencilset()
+2019-01-08 15:43:45 -Mapped "{[/activiti/model/{modelId}/json],methods=[GET]}" onto public com.fasterxml.jackson.databind.node.ObjectNode com.flame_springbootdo.activiti.controller.ModelController.getEditorJson(java.lang.String)
+2019-01-08 15:43:45 -Mapped "{[/activiti/model/add]}" onto public void com.flame_springbootdo.activiti.controller.ModelController.newModel(javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2019-01-08 15:43:45 -Mapped "{[/blog/bContent/add],methods=[GET]}" onto java.lang.String com.flame_springbootdo.blog.controller.ContentController.add()
+2019-01-08 15:43:45 -Mapped "{[/blog/bContent/save],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.blog.controller.ContentController.save(com.flame_springbootdo.blog.domain.ContentDO)
+2019-01-08 15:43:45 -Mapped "{[/blog/bContent],methods=[GET]}" onto java.lang.String com.flame_springbootdo.blog.controller.ContentController.bContent()
+2019-01-08 15:43:45 -Mapped "{[/common/dict/add],methods=[GET]}" onto java.lang.String com.flame_springbootdo.common.controller.DictController.add()
+2019-01-08 15:43:45 -Mapped "{[/common/dict/remove],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.common.controller.DictController.remove(java.lang.Long)
+2019-01-08 15:43:45 -Mapped "{[/common/dict/batchRemove],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.common.controller.DictController.remove(java.lang.Long[])
+2019-01-08 15:43:45 -Mapped "{[/common/dict/update]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.common.controller.DictController.update(com.flame_springbootdo.common.domain.DictDO)
+2019-01-08 15:43:45 -Mapped "{[/common/dict/list],methods=[GET]}" onto public com.flame_springbootdo.common.utils.PageUtils com.flame_springbootdo.common.controller.DictController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-08 15:43:45 -Mapped "{[/common/dict/save],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.common.controller.DictController.save(com.flame_springbootdo.common.domain.DictDO)
+2019-01-08 15:43:45 -Mapped "{[/common/dict/type],methods=[GET]}" onto public java.util.List<com.flame_springbootdo.common.domain.DictDO> com.flame_springbootdo.common.controller.DictController.listType()
+2019-01-08 15:43:45 -Mapped "{[/common/dict],methods=[GET]}" onto java.lang.String com.flame_springbootdo.common.controller.DictController.dict()
+2019-01-08 15:43:45 -Mapped "{[/common/dict/edit/{id}],methods=[GET]}" onto java.lang.String com.flame_springbootdo.common.controller.DictController.edit(org.springframework.ui.Model,java.lang.Long)
+2019-01-08 15:43:45 -Mapped "{[/common/dict/add/{type}/{description}],methods=[GET]}" onto java.lang.String com.flame_springbootdo.common.controller.DictController.addD(org.springframework.ui.Model,java.lang.String,java.lang.String)
+2019-01-08 15:43:45 -Mapped "{[/common/generator/list],methods=[GET]}" onto java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.flame_springbootdo.common.controller.GeneratorController.list()
+2019-01-08 15:43:45 -Mapped "{[/common/generator/code/{tableName}]}" onto public void com.flame_springbootdo.common.controller.GeneratorController.code(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) throws java.io.IOException
+2019-01-08 15:43:45 -Mapped "{[/common/generator],methods=[GET]}" onto java.lang.String com.flame_springbootdo.common.controller.GeneratorController.generator()
+2019-01-08 15:43:45 -Mapped "{[/common/job/add],methods=[GET]}" onto java.lang.String com.flame_springbootdo.common.controller.JobController.add()
+2019-01-08 15:43:45 -Mapped "{[/common/job/romove],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.common.controller.JobController.remove(java.lang.Long)
+2019-01-08 15:43:45 -Mapped "{[/common/job/batchRemove],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.common.controller.JobController.remove(java.lang.Long[])
+2019-01-08 15:43:45 -Mapped "{[/common/job/update]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.common.controller.JobController.update(com.flame_springbootdo.common.domain.TaskDO)
+2019-01-08 15:43:45 -Mapped "{[/common/job/list],methods=[GET]}" onto public com.flame_springbootdo.common.utils.PageUtils com.flame_springbootdo.common.controller.JobController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-08 15:43:45 -Mapped "{[/common/job/save],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.common.controller.JobController.save(com.flame_springbootdo.common.domain.TaskDO)
+2019-01-08 15:43:45 -Mapped "{[/common/job],methods=[GET]}" onto java.lang.String com.flame_springbootdo.common.controller.JobController.Task()
+2019-01-08 15:43:45 -Mapped "{[/common/job/edit/{id}],methods=[GET]}" onto java.lang.String com.flame_springbootdo.common.controller.JobController.edit(org.springframework.ui.Model,java.lang.Long)
+2019-01-08 15:43:45 -Mapped "{[/common/job/changeJobStatus],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.common.controller.JobController.changeJobStatus(java.lang.Long,java.lang.String)
+2019-01-08 15:43:45 -Mapped "{[/system/sysDept/add/{pId}],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.DeptController.add(java.lang.Long,org.springframework.ui.Model)
+2019-01-08 15:43:45 -Mapped "{[/system/sysDept/remove],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.DeptController.remove(java.lang.Long)
+2019-01-08 15:43:45 -Mapped "{[/system/sysDept/batchRemove],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.DeptController.remove(java.lang.Long[])
+2019-01-08 15:43:45 -Mapped "{[/system/sysDept/update]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.DeptController.update(com.flame_springbootdo.system.domain.DeptDO)
+2019-01-08 15:43:45 -Mapped "{[/system/sysDept/list],methods=[GET]}" onto public java.util.List<com.flame_springbootdo.system.domain.DeptDO> com.flame_springbootdo.system.controller.DeptController.list()
+2019-01-08 15:43:45 -Mapped "{[/system/sysDept/save],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.DeptController.save(com.flame_springbootdo.system.domain.DeptDO)
+2019-01-08 15:43:45 -Mapped "{[/system/sysDept/tree],methods=[GET]}" onto public com.flame_springbootdo.common.domain.Tree<com.flame_springbootdo.system.domain.DeptDO> com.flame_springbootdo.system.controller.DeptController.tree()
+2019-01-08 15:43:45 -Mapped "{[/system/sysDept/edit/{deptId}],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.DeptController.edit(java.lang.Long,org.springframework.ui.Model)
+2019-01-08 15:43:45 -Mapped "{[/system/sysDept],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.DeptController.dept()
+2019-01-08 15:43:45 -Mapped "{[/system/sysDept/treeView],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.DeptController.treeView()
+2019-01-08 15:43:45 -Mapped "{[/common/log/add],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.LogController.add()
+2019-01-08 15:43:45 -Mapped "{[/common/log/romove],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.LogController.remove(java.lang.Long)
+2019-01-08 15:43:45 -Mapped "{[/common/log/batchRemove],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.LogController.remove(java.lang.Long[])
+2019-01-08 15:43:45 -Mapped "{[/common/log/update]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.LogController.update(com.flame_springbootdo.system.domain.LogDO)
+2019-01-08 15:43:45 -Mapped "{[/common/log/list],methods=[GET]}" onto public com.flame_springbootdo.common.utils.PageUtils com.flame_springbootdo.system.controller.LogController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-08 15:43:45 -Mapped "{[/common/log/save],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.LogController.save(com.flame_springbootdo.system.domain.LogDO)
+2019-01-08 15:43:45 -Mapped "{[/common/log/search],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.LogController.search(java.lang.String)
+2019-01-08 15:43:45 -Mapped "{[/common/log/edit/{id}],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.LogController.edit(org.springframework.ui.Model,java.lang.Long)
+2019-01-08 15:43:45 -Mapped "{[/common/log],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.LogController.Log()
+2019-01-08 15:43:45 -Mapped "{[/index],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.LoginController.index(org.springframework.ui.Model)
+2019-01-08 15:43:45 -Mapped "{[/main],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.LoginController.main()
+2019-01-08 15:43:45 -Mapped "{[/logout],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.LoginController.logout()
+2019-01-08 15:43:45 -Mapped "{[/login],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.LoginController.login()
+2019-01-08 15:43:45 -Mapped "{[/ || ],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.LoginController.welcome(org.springframework.ui.Model)
+2019-01-08 15:43:45 -Mapped "{[/login],methods=[POST]}" onto com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.LoginController.ajaxLogin(java.lang.String,java.lang.String)
+2019-01-08 15:43:45 -Mapped "{[/sys/menu/add/{pId}],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.MenuController.add(org.springframework.ui.Model,java.lang.Long)
+2019-01-08 15:43:45 -Mapped "{[/sys/menu/remove],methods=[POST]}" onto com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.MenuController.remove(java.lang.Long)
+2019-01-08 15:43:45 -Mapped "{[/sys/menu/update],methods=[POST]}" onto com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.MenuController.update(com.flame_springbootdo.system.domain.MenuDO)
+2019-01-08 15:43:45 -Mapped "{[/sys/menu/list]}" onto java.util.List<com.flame_springbootdo.system.domain.MenuDO> com.flame_springbootdo.system.controller.MenuController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-08 15:43:45 -Mapped "{[/sys/menu/save],methods=[POST]}" onto com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.MenuController.save(com.flame_springbootdo.system.domain.MenuDO)
+2019-01-08 15:43:45 -Mapped "{[/sys/menu/tree/{roleId}],methods=[GET]}" onto com.flame_springbootdo.common.domain.Tree<com.flame_springbootdo.system.domain.MenuDO> com.flame_springbootdo.system.controller.MenuController.tree(java.lang.Long)
+2019-01-08 15:43:45 -Mapped "{[/sys/menu/tree],methods=[GET]}" onto com.flame_springbootdo.common.domain.Tree<com.flame_springbootdo.system.domain.MenuDO> com.flame_springbootdo.system.controller.MenuController.tree()
+2019-01-08 15:43:45 -Mapped "{[/sys/menu/edit/{id}],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.MenuController.edit(org.springframework.ui.Model,java.lang.Long)
+2019-01-08 15:43:45 -Mapped "{[/sys/menu],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.MenuController.menu(org.springframework.ui.Model)
+2019-01-08 15:43:45 -Mapped "{[/sys/role/add],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.RoleController.add()
+2019-01-08 15:43:45 -Mapped "{[/sys/role/update],methods=[POST]}" onto com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.RoleController.update(com.flame_springbootdo.system.domain.RoleDO)
+2019-01-08 15:43:45 -Mapped "{[/sys/role/list],methods=[GET]}" onto java.util.List<com.flame_springbootdo.system.domain.RoleDO> com.flame_springbootdo.system.controller.RoleController.list()
+2019-01-08 15:43:45 -Mapped "{[/sys/role/remove],methods=[POST]}" onto com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.RoleController.save(java.lang.Long)
+2019-01-08 15:43:45 -Mapped "{[/sys/role/save],methods=[POST]}" onto com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.RoleController.save(com.flame_springbootdo.system.domain.RoleDO)
+2019-01-08 15:43:45 -Mapped "{[/sys/role/batchRemove],methods=[POST]}" onto com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.RoleController.batchRemove(java.lang.Long[])
+2019-01-08 15:43:45 -Mapped "{[/sys/role],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.RoleController.role()
+2019-01-08 15:43:45 -Mapped "{[/sys/role/edit/{id}],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.RoleController.edit(java.lang.Long,org.springframework.ui.Model)
+2019-01-08 15:43:45 -Mapped "{[/sys/online/list]}" onto public java.util.List<com.flame_springbootdo.system.domain.UserOnline> com.flame_springbootdo.system.controller.SessionController.list()
+2019-01-08 15:43:45 -Mapped "{[/sys/online/sessionList]}" onto public java.util.Collection<org.apache.shiro.session.Session> com.flame_springbootdo.system.controller.SessionController.sessionList()
+2019-01-08 15:43:45 -Mapped "{[/sys/online/forceLogout/{sessionId}]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.SessionController.forceLogout(java.lang.String,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-01-08 15:43:45 -Mapped "{[/sys/online],methods=[GET]}" onto public java.lang.String com.flame_springbootdo.system.controller.SessionController.online()
+2019-01-08 15:43:45 -Mapped "{[/sys/online/listOnlineUser]}" onto public java.util.List<com.flame_springbootdo.system.domain.UserDO> com.flame_springbootdo.system.controller.SessionController.listOnlineUser()
+2019-01-08 15:43:45 -Mapped "{[/sys/user/exit],methods=[POST]}" onto boolean com.flame_springbootdo.system.controller.UserController.exit(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-08 15:43:45 -Mapped "{[/sys/user/add],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.UserController.add(org.springframework.ui.Model)
+2019-01-08 15:43:45 -Mapped "{[/sys/user/romove],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.UserController.remove(java.lang.Long)
+2019-01-08 15:43:45 -Mapped "{[/sys/user/batchRemove],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.UserController.remove(java.lang.Long[])
+2019-01-08 15:43:45 -Mapped "{[/sys/user/update]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.UserController.update(com.flame_springbootdo.system.domain.UserDO)
+2019-01-08 15:43:45 -Mapped "{[/sys/user/list],methods=[GET]}" onto public com.flame_springbootdo.common.utils.PageUtils com.flame_springbootdo.system.controller.UserController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-01-08 15:43:45 -Mapped "{[/sys/user/save],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.UserController.save(com.flame_springbootdo.system.domain.UserDO)
+2019-01-08 15:43:45 -Mapped "{[/sys/user],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.UserController.User()
+2019-01-08 15:43:45 -Mapped "{[/sys/user/edit/{id}],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.UserController.edit(org.springframework.ui.Model,java.lang.Long)
+2019-01-08 15:43:45 -Mapped "{[/sys/user/adminResetPwd],methods=[POST]}" onto com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.UserController.adminResetPwd(com.flame_springbootdo.system.vo.UserVO)
+2019-01-08 15:43:45 -Mapped "{[/sys/user/updatePeronal],methods=[POST]}" onto public com.flame_springbootdo.common.utils.R com.flame_springbootdo.system.controller.UserController.updatePeronal(com.flame_springbootdo.system.domain.UserDO)
+2019-01-08 15:43:45 -Mapped "{[/sys/user/resetPwd/{id}],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.UserController.resetPwd(java.lang.Long,org.springframework.ui.Model)
+2019-01-08 15:43:45 -Mapped "{[/sys/user/personal],methods=[GET]}" onto java.lang.String com.flame_springbootdo.system.controller.UserController.personal(org.springframework.ui.Model)
+2019-01-08 15:43:45 -Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-01-08 15:43:45 -Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-01-08 15:43:45 -Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-01-08 15:43:45 -Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-01-08 15:43:45 -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-08 15:43:45 -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-08 15:43:45 -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-08 15:43:45 -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-08 15:43:45 -Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6f051497: startup date [Tue Jan 08 15:43:39 CST 2019]; root of context hierarchy
+2019-01-08 15:43:45 -Detected ResponseBodyAdvice bean in fastJsonpResponseBodyAdvice
+2019-01-08 15:43:45 -Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@a1da7f0: startup date [Tue Jan 08 15:43:40 CST 2019]; root of context hierarchy
+2019-01-08 15:43:45 -Detected ResponseBodyAdvice bean in fastJsonpResponseBodyAdvice
+2019-01-08 15:43:45 -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-08 15:43:45 -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-08 15:43:45 -Detected @ExceptionHandler methods in BDExceptionHandler
+2019-01-08 15:43:45 -Detected ResponseBodyAdvice implementation in fastJsonpResponseBodyAdvice
+2019-01-08 15:43:45 -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-08 15:43:45 -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-08 15:43:46 -Detected @ExceptionHandler methods in BDExceptionHandler
+2019-01-08 15:43:46 -Detected ResponseBodyAdvice implementation in fastJsonpResponseBodyAdvice
+2019-01-08 15:43:46 -[THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-01-08 15:43:46 -[THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-01-08 15:43:46 -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+2019-01-08 15:43:46 -Unregistering JMX-exposed beans on shutdown
+2019-01-08 15:43:46 -Shutting down Quartz Scheduler
+2019-01-08 15:43:46 -Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2019-01-08 15:43:46 -Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-01-08 15:43:46 -Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2019-01-08 15:43:46 -{dataSource-11} closed
+2019-01-08 15:43:46 -Stopping service [Tomcat]
+2019-01-08 15:43:46 -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-01-08 15:43:46 -Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1708)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:581)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$147/687993820.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.FlameSpringbootdoApplication.main(FlameSpringbootdoApplication.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+	at com.sun.jmx.mbeanserver.Repository.addMBean(Repository.java:437)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerWithRepository(DefaultMBeanServerInterceptor.java:1898)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:966)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:900)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:324)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:522)
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar.afterPropertiesSet(SpringApplicationAdminMXBeanRegistrar.java:100)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1767)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1704)
+	... 22 common frames omitted
+2019-01-08 15:43:46 -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cacheManager' defined in class path resource [org/springframework/boot/autoconfigure/cache/EhCacheCacheConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: An 'alive' EhCache CacheManager is required - current cache is STATUS_SHUTDOWN
+2019-01-08 15:43:46 -Unregistering JMX-exposed beans on shutdown
+2019-01-08 15:43:46 -Shutting down Quartz Scheduler
+2019-01-08 15:43:46 -Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2019-01-08 15:43:46 -Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-01-08 15:43:46 -Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2019-01-08 15:43:46 -{dataSource-10} closed
+2019-01-08 15:43:46 -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-01-08 15:43:46 -Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cacheManager' defined in class path resource [org/springframework/boot/autoconfigure/cache/EhCacheCacheConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: An 'alive' EhCache CacheManager is required - current cache is STATUS_SHUTDOWN
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1708)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:581)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$147/687993820.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.FlameSpringbootdoApplication.main(FlameSpringbootdoApplication.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: An 'alive' EhCache CacheManager is required - current cache is STATUS_SHUTDOWN
+	at org.springframework.cache.ehcache.EhCacheCacheManager.loadCaches(EhCacheCacheManager.java:92)
+	at org.springframework.cache.support.AbstractCacheManager.initializeCaches(AbstractCacheManager.java:62)
+	at org.springframework.cache.support.AbstractCacheManager.afterPropertiesSet(AbstractCacheManager.java:51)
+	at org.springframework.cache.ehcache.EhCacheCacheManager.afterPropertiesSet(EhCacheCacheManager.java:80)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1767)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1704)
+	... 22 common frames omitted

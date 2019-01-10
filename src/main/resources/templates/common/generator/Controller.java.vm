@@ -1,0 +1,141 @@
+package ${package}.controller;
+
+import java.util.List;
+import java.util.Map;
+
+import com.flame_springbootdo.common.utils.PageUtils;
+import com.flame_springbootdo.common.utils.Query;
+import com.flame_springbootdo.common.utils.R;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import ${package}.domain.${className}DO;
+import ${package}.service.${className}Service;
+
+
+/**
+ * ${comments}
+ *
+ * @author ${author}
+ * @email ${email}
+ * @date ${datetime}
+ */
+
+@Controller
+@RequestMapping("/${pathName}/${classname}")
+public class ${className}Controller {
+
+    @Autowired
+    private ${className}Service ${classname}Service;
+
+    @GetMapping()
+    @RequiresPermissions("${pathName}:${classname}:${classname}")
+    String ${className}(){
+        return "/${pathName}/${classname}/${classname}";
+    }
+
+    /**
+    * 查询列表
+    * @param params
+    * @return
+    */
+    @ResponseBody
+    @GetMapping("/list")
+    @RequiresPermissions("${pathName}:${classname}:${classname}")
+    public PageUtils list(@RequestParam Map<String,Object> params){
+        //查询列表数据
+        Query query = new Query(params);
+        List<${className}DO> ${classname}List = ${classname}Service.list(query);
+        int total = ${classname}Service.count(query);
+        PageUtils pageUtils = new PageUtils(${classname}List, total);
+        return pageUtils;
+    }
+
+    /**
+    * 新增
+    * @return
+    */
+    @GetMapping("/add")
+    @RequiresPermissions("${pathName}:${classname}:add")
+    String add(){
+        return "${pathName}/${classname}/add";
+    }
+
+    /**
+    * 修改
+    * @param model
+    * @return
+    */
+    @GetMapping("/edit/{${pk.attrname}}")
+    @RequiresPermissions("${pathName}:${classname}:edit")
+    String edit(Model model, @PathVariable("${pk.attrname}") ${pk.attrType} ${pk.attrname}){
+        ${className}DO ${classname} = ${classname}Service.get(${pk.attrname});
+        model.addAttribute("${classname}", ${classname});
+        return "${pathName}/${classname}/edit";
+    }
+
+    /**
+    * 保存
+    * @return
+    */
+    @ResponseBody
+    @PostMapping("/save")
+    @RequiresPermissions("${pathName}:${classname}:add")
+    public R save(${className}DO ${classname}){
+        if (${classname}Service.save(${classname}) > 0) {
+            return R.ok();
+        }
+        return R.error();
+    }
+
+    /**
+    * 修改
+    * @return
+    */
+    @ResponseBody
+    @RequestMapping("/update")
+    @RequiresPermissions("${pathName}:${classname}:edit")
+    public R update(${className}DO ${classname}){
+        if (${classname}Service.update(${classname}) > 0 ) {
+            return R.ok();
+        }
+        return R.error();
+    }
+
+    /**
+    *  删除
+    * @return
+    */
+    @ResponseBody
+    @PostMapping("/romove")
+    @RequiresPermissions("${pathName}:${classname}:remove")
+    public R remove(@RequestParam ${pk.attrType} ${pk.attrname}){
+        if (${classname}Service.remove(${pk.attrname}) > 0 ) {
+            return R.ok();
+        }
+        return R.error();
+    }
+
+    /**
+    * 批量删除
+    * @return
+    */
+    @ResponseBody
+    @PostMapping("/batchRemove")
+    @RequiresPermissions("${pathName}:${classname}:batchRemove")
+    public R remove(@RequestParam("ids[]") ${pk.attrType}[] ${pk.attrname}s){
+        if (${classname}Service.batchRemove(${pk.attrname}s) > 0 ) {
+            return R.ok();
+        }
+        return R.error();
+    }
+}

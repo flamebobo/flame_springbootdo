@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content ">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <form class="form-horizontal m-t" id="signupForm">
+                        <input id="id" name="id" th:value="${log.id}"  type="hidden">
+                                                                                                                                        <div class="form-group">
+                                    <label class="col-sm-3 control-label">用户id：</label>
+                                    <div class="col-sm-8">
+                                        <input id="userId" name="userId" th:value="${log.userId}" class="form-control" type="text">
+                                    </div>
+                                </div>
+                                                                                                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">用户名：</label>
+                                    <div class="col-sm-8">
+                                        <input id="username" name="username" th:value="${log.username}" class="form-control" type="text">
+                                    </div>
+                                </div>
+                                                                                                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">用户操作：</label>
+                                    <div class="col-sm-8">
+                                        <input id="operation" name="operation" th:value="${log.operation}" class="form-control" type="text">
+                                    </div>
+                                </div>
+                                                                                                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">响应时间：</label>
+                                    <div class="col-sm-8">
+                                        <input id="time" name="time" th:value="${log.time}" class="form-control" type="text">
+                                    </div>
+                                </div>
+                                                                                                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">请求方法：</label>
+                                    <div class="col-sm-8">
+                                        <input id="method" name="method" th:value="${log.method}" class="form-control" type="text">
+                                    </div>
+                                </div>
+                                                                                                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">请求参数：</label>
+                                    <div class="col-sm-8">
+                                        <input id="params" name="params" th:value="${log.params}" class="form-control" type="text">
+                                    </div>
+                                </div>
+                                                                                                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">IP地址：</label>
+                                    <div class="col-sm-8">
+                                        <input id="ip" name="ip" th:value="${log.ip}" class="form-control" type="text">
+                                    </div>
+                                </div>
+                                                                                                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">创建时间：</label>
+                                    <div class="col-sm-8">
+                                        <input id="gmtCreate" name="gmtCreate" th:value="${log.gmtCreate}" class="form-control" type="text">
+                                    </div>
+                                </div>
+                                                                            <div class="form-group">
+                            <div class="col-sm-8 col-sm-offset-3">
+                                <button type="submit" class="btn btn-primary">提交</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:include="include::footer"></div>
+<script type="text/javascript" src="/js/appjs/system/log/edit.js">
+</script>
+</body>
+</html>
